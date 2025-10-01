@@ -27,11 +27,16 @@ def all_help():
             "description": "Merge all feeds into one response",
             "parameters": { "limit": "Optional. Total number of items to return across all feeds (default: 10)" },
             "example": "/api/all?limit=20"
+        },
+        "/api/select": {
+            "description": "Return a single news item with formatted datetime and summary, optimized for MMBasic",
+            "parameters": { "index": "Required. Integer between 1 and 10 to select the item position" },
+            "example": "/api/select?index=3"
         }
     }
 
     tech_endpoints = {
-        "/api/tech/rss/techradar": {
+        "/api/tech/techradar": {
             "description": "Fetch latest TechRadar news articles",
             "parameters": { "limit": "Optional. Number of items to return (default: 10)" },
             "example": "/api/tech/techradar?limit=5",
@@ -53,6 +58,11 @@ def all_help():
             "description": "Merge all tech feeds into one response",
             "parameters": { "limit": "Optional. Total number of items to return across all feeds (default: 10)" },
             "example": "/api/tech/all?limit=7"
+        },
+        "/api/tech/select": {
+            "description": "Return a single tech news item with formatted datetime and summary, optimized for MMBasic",
+            "parameters": { "index": "Required. Integer between 1 and 10 to select the item position" },
+            "example": "/api/tech/select?index=2"
         }
     }
 
